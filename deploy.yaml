@@ -1,0 +1,12 @@
+---
+- name: Deploy pod and service in EKS K8s Cluster 
+  hosts: ekscluster
+  become: false
+  gather_facts: true
+
+  tasks:
+  - name: Deploy Pod
+    shell: kubectl apply -f pod.yaml
+  
+  - name: Deploy Service
+    shell: kubectl -f svc.yaml

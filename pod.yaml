@@ -1,0 +1,13 @@
+apiVersion: v1        
+kind: Pod         
+Namespace: cloudmotos
+metadata:             
+  name: mycodecon
+  labels:
+    app: mycodecon
+    tier: frontend
+spec:               
+  containers:
+  - name: mycodecontainer
+    image: techsupportlal/jautomation
+
