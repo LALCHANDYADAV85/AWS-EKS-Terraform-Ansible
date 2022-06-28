@@ -41,6 +41,7 @@ resource "aws_lb_listener" "front_end" {
 
 resource "aws_lb_listener_rule" "static" {
   listener_arn = aws_lb_listener.front_end.arn
+  certificate_arn = "${data.aws_acm_certificate.example.arn}"
   priority     = 100
 
   action {
